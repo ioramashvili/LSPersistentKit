@@ -1,5 +1,3 @@
-# LSPersistentKit
-
 <h1 align="center">Use of new property wrapper syntax for common UserDefault and Keychain operations</h1>
 
 ## Usage
