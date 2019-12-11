@@ -16,7 +16,7 @@ public struct LSUserDefault<T> {
         self.defaultValue = defaultValue
     }
     
-    public var value: T {
+    public var wrappedValue: T {
         get {
             return userDefaults.object(forKey: key) as? T ?? defaultValue
         }
@@ -53,7 +53,7 @@ public struct LSCodableUserDefault<T: Codable> {
         self.encoder = encoder
     }
     
-    public var value: T {
+    public var wrappedValue: T {
         get {
             guard let data = userDefaults.data(forKey: key) else {
                 return defaultValue

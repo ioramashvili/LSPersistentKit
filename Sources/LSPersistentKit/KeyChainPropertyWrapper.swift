@@ -16,7 +16,7 @@ public struct LSRegularKeychain<T> {
         self.accessibility = accessibility
     }
     
-    public var value: T {
+    public var wrappedValue: T {
         get {
             guard let data = keyChainWrapper.data(forKey: key, withAccessibility: accessibility) else {
                 return defaultValue
@@ -57,7 +57,7 @@ public struct LSCodableKeychain<T: Codable> {
         self.accessibility = accessibility
     }
     
-    public var value: T {
+    public var wrappedValue: T {
         get {
             guard let data = keyChainWrapper.data(forKey: key, withAccessibility: accessibility) else {
                 return defaultValue
